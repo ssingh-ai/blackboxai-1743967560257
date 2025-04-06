@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PetClever - Pet Supplies</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-white text-gray-800 font-poppins">
+  <!-- Header Section -->
+  <header class="bg-white shadow-lg sticky top-0 z-50">
+    <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+      <a href="/" class="text-2xl font-bold text-blue-600">PetClever</a>
+      <nav class="hidden md:flex space-x-6">
+        <a href="#shop" class="hover:text-blue-600 transition">Shop</a>
+        <a href="#about" class="hover:text-blue-600 transition">About</a>
+        <a href="#blog" class="hover:text-blue-600 transition">Blog</a>
+        <a href="#contact" class="hover:text-blue-600 transition">Contact</a>
+      </nav>
+      <button class="md:hidden hover:bg-blue-100 p-2 rounded-full transition mobile-menu-toggle">
+        <i class="fas fa-bars text-xl"></i>
+      </button>
+      <a href="/cart" class="relative">
+        <i class="fas fa-shopping-cart text-xl"></i>
+        <span class="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">0</span>
+      </a>
+    </div>
+    <!-- Mobile Menu -->
+    <div class="mobile-menu hidden md:hidden bg-white shadow-lg">
+      <a href="#shop" class="block px-4 py-2 hover:bg-gray-100">Shop</a>
+      <a href="#about" class="block px-4 py-2 hover:bg-gray-100">About</a>
+      <a href="#blog" class="block px-4 py-2 hover:bg-gray-100">Blog</a>
+      <a href="#contact" class="block px-4 py-2 hover:bg-gray-100">Contact</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="bg-cover bg-center py-32" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.pexels.com/photos/3761509/pexels-photo-3761509.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')">
+    <div class="container mx-auto text-center px-4">
+      <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-4">Premium Pet Supplies</h1>
+      <p class="text-lg md:text-xl text-white mb-8">Healthy & Happy Pets Start Here</p>
+      <button class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full transition transform hover:scale-105">
+        Shop Now <i class="fas fa-arrow-right ml-2"></i>
+      </button>
+    </div>
+  </section>
+
+  <!-- Product Categories -->
+  <section class="py-16 bg-gray-50" id="shop">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-12">Explore Categories</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <!-- Category 1 -->
+        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300 text-center">
+          <div class="w-20 h-20 mx-auto mb-4 bg-blue-100 rounded-full flex items-center justify-center">
+            <i class="fas fa-dog text-blue-600 text-2xl"></i>
+          </div>
+          <h3 class="text-lg font-medium mb-2">Dog Food</h3>
+          <p class="text-gray-600 text-sm">Premium nutrition</p>
+        </div>
+        
+        <!-- Category 2 -->
+        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300 text-center">
+          <div class="w-20 h-20 mx-auto mb-4 bg-blue-100 rounded-full flex items-center justify-center">
+            <i class="fas fa-cat text-blue-600 text-2xl"></i>
+          </div>
+          <h3 class="text-lg font-medium mb-2">Cat Food</h3>
+          <p class="text-gray-600 text-sm">Specialty formulas</p>
+        </div>
+        
+        <!-- Category 3 -->
+        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300 text-center">
+          <div class="w-20 h-20 mx-auto mb-4 bg-blue-100 rounded-full flex items-center justify-center">
+            <i class="fas fa-tshirt text-blue-600 text-2xl"></i>
+          </div>
+          <h3 class="text-lg font-medium mb-2">Accessories</h3>
+          <p class="text-gray-600 text-sm">Collars & more</p>
+        </div>
+        
+        <!-- Category 4 -->
+        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300 text-center">
+          <div class="w-20 h-20 mx-auto mb-4 bg-blue-100 rounded-full flex items-center justify-center">
+            <i class="fas fa-bone text-blue-600 text-2xl"></i>
+          </div>
+          <h3 class="text-lg font-medium mb-2">Toys</h3>
+          <p class="text-gray-600 text-sm">Fun for all pets</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Grid -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-12">Featured Products</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Product 1 -->
+        <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300 product-card">
+          <div class="relative overflow-hidden h-64">
+            <img src="https://images.pexels.com/photos/2607544/pexels-photo-2607544.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
+                 alt="Premium Dog Food" 
+                 class="w-full h-full object-cover transition duration-500 hover:scale-105">
+            <div class="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded">Sale</div>
+          </div>
+          <div class="p-4">
+            <h3 class="text-lg font-medium mb-1">Premium Dog Food</h3>
+            <p class="text-gray-600 text-sm mb-2">Grain-free, all-natural ingredients</p>
+            <div class="flex items-center justify-between">
+              <span class="text-blue-600 font-bold">$29.99</span>
+              <span class="text-gray-400 text-sm line-through">$34.99</span>
+            </div>
+            <button class="mt-4 w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded transition">
+              Add to Cart <i class="fas fa-cart-plus ml-1"></i>
+            </button>
+          </div>
+        </div>
+        
+        <!-- Product 2 -->
+        <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300 product-card">
+          <div class="relative overflow-hidden h-64">
+            <img src="https://images.pexels.com/photos/774731/pexels-photo-774731.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
+                 alt="Cat Tree" 
+                 class="w-full h-full object-cover transition duration-500 hover:scale-105">
+          </div>
+          <div class="p-4">
+            <h3 class="text-lg font-medium mb-1">Cat Tree</h3>
+            <p class="text-gray-600 text-sm mb-2">Multi-level with scratching posts</p>
+            <div class="flex items-center justify-between">
+              <span class="text-blue-600 font-bold">$59.99</span>
+            </div>
+            <button class="mt-4 w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded transition">
+              Add to Cart <i class="fas fa-cart-plus ml-1"></i>
+            </button>
+          </div>
+        </div>
+        
+        <!-- Product 3 -->
+        <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300 product-card">
+          <div class="relative overflow-hidden h-64">
+            <img src="https://images.pexels.com/photos/4587993/pexels-photo-4587993.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
+                 alt="Dog Leash" 
+                 class="w-full h-full object-cover transition duration-500 hover:scale-105">
+            <div class="absolute top-2 right-2 bg-green-500 text-white text-xs px-2 py-1 rounded">New</div>
+          </div>
+          <div class="p-4">
+            <h3 class="text-lg font-medium mb-1">Premium Dog Leash</h3>
+            <p class="text-gray-600 text-sm mb-2">Durable, reflective, 6ft length</p>
+            <div class="flex items-center justify-between">
+              <span class="text-blue-600 font-bold">$19.99</span>
+            </div>
+            <button class="mt-4 w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded transition">
+              Add to Cart <i class="fas fa-cart-plus ml-1"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-12">Happy Pet Owners</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Testimonial 1 -->
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+              <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="Sarah J." class="w-full h-full object-cover">
+            </div>
+            <div>
+              <h4 class="font-medium">Sarah J.</h4>
+              <div class="flex text-yellow-400">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <p class="text-gray-600">"My dog absolutely loves the premium food from PetClever. His coat has never been shinier!"</p>
+        </div>
+        
+        <!-- Testimonial 2 -->
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+              <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael T." class="w-full h-full object-cover">
+            </div>
+            <div>
+              <h4 class="font-medium">Michael T.</h4>
+              <div class="flex text-yellow-400">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+            </div>
+          </div>
+          <p class="text-gray-600">"Fast shipping and great customer service. The cat tree is very sturdy and well-made."</p>
+        </div>
+        
+        <!-- Testimonial 3 -->
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+              <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Emily R." class="w-full h-full object-cover">
+            </div>
+            <div>
+              <h4 class="font-medium">Emily R.</h4>
+              <div class="flex text-yellow-400">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <p class="text-gray-600">"The reflective leash is perfect for our evening walks. Very durable and comfortable to hold."</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="py-16 bg-blue-600 text-white">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-4">Join Our Newsletter</h2>
+      <p class="mb-8 max-w-2xl mx-auto">Get exclusive deals, pet care tips, and new product announcements straight to your inbox.</p>
+      <form class="max-w-md mx-auto flex">
+        <input type="email" placeholder="Your email address" class="flex-grow px-4 py-3 rounded-l focus:outline-none text-gray-800">
+        <button type="submit" class="bg-blue-800 hover:bg-blue-900 px-6 py-3 rounded-r transition">
+          Subscribe <i class="fas fa-paper-plane ml-2"></i>
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-12">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <!-- Column 1 -->
+        <div>
+          <h3 class="text-xl font-bold mb-4">PetClever</h3>
+          <p class="mb-4">Your trusted source for premium pet supplies and accessories.</p>
+          <div class="flex space-x-4">
+            <a href="#" class="hover:text-blue-400 transition"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="hover:text-blue-400 transition"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="hover:text-blue-400 transition"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="hover:text-blue-400 transition"><i class="fab fa-pinterest-p"></i></a>
+          </div>
+        </div>
+        
+        <!-- Column 2 -->
+        <div>
+          <h4 class="text-lg font-bold mb-4">Shop</h4>
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-blue-400 transition">Dog Supplies</a></li>
+            <li><a href="#" class="hover:text-blue-400 transition">Cat Supplies</a></li>
+            <li><a href="#" class="hover:text-blue-400 transition">Small Pets</a></li>
+            <li><a href="#" class="hover:text-blue-400 transition">New Arrivals</a></li>
+            <li><a href="#" class="hover:text-blue-400 transition">Sale Items</a></li>
+          </ul>
+        </div>
+        
+        <!-- Column 3 -->
+        <div>
+          <h4 class="text-lg font-bold mb-4">Help</h4>
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-blue-400 transition">Contact Us</a></li>
+            <li><a href="#" class="hover:text-blue-400 transition">FAQs</a></li>
+            <li><a href="#" class="hover:text-blue-400 transition">Shipping Info</a></li>
+            <li><a href="#" class="hover:text-blue-400 transition">Returns & Exchanges</a></li>
+            <li><a href="#" class="hover:text-blue-400 transition">Size Guide</a></li>
+          </ul>
+        </div>
+        
+        <!-- Column 4 -->
+        <div>
+          <h4 class="text-lg font-bold mb-4">About</h4>
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-blue-400 transition">Our Story</a></li>
+            <li><a href="#" class="hover:text-blue-400 transition">Blog</a></li>
+            <li><a href="#" class="hover:text-blue-400 transition">Careers</a></li>
+            <li><a href="#" class="hover:text-blue-400 transition">Privacy Policy</a></li>
+            <li><a href="#" class="hover:text-blue-400 transition">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+        <p>&copy; 2023 PetClever. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
