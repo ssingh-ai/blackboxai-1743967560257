@@ -1,0 +1,60 @@
+/* Custom styles for PetClever website */
+
+/* Font family */
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Mobile menu styles */
+.mobile-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.mobile-menu.active {
+  display: block;
+}
+
+/* Product card hover effect */
+.product-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Hero section overlay */
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* Input focus styles */
+input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5);
+}
+
+/* Smooth transitions */
+a, button {
+  transition: all 0.2s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .hero-section {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+  
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+}
